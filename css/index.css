@@ -188,13 +188,19 @@ header a.show{
     padding: 3em 0;
 }
 
+.showreel .cover{
+    width: 960px;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+}
 .showreel .outer{
     width: 960px;
     margin: auto;
     display: flex;
-    justify-content: center;
-    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
 }
+
 .showreel .card{
     padding: 0 10px;
 }
@@ -233,6 +239,7 @@ header a.show{
 
 .showreel .wrapper #btnLeft{
     left: 10em;
+    z-index: 3;
 }
 
 .showreel .wrapper #btnRight{

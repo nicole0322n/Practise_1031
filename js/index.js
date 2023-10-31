@@ -85,5 +85,40 @@ $(document).ready(function () {
     });
 });
 
+// 輪播圖
+window.addEventListener("load", function () {
+    let outer = document.querySelector(".outer");
+    let btnLeft = document.querySelector("#btnLeft");
+    let btnRight = document.querySelector("#btnRight");
+    let curIndex = 0;
+    let cardCount = document.querySelectorAll(".card").length;
+
+    btnRight.onclick = function () {
+        if (curIndex > 0) {
+            curIndex--;
+            let newPosition = curIndex * -320;
+            outer.style.transform = `translateX(${newPosition}px)`;
+            btnLeft.disabled = false;
+        }
+
+        if (curIndex === 0) {
+            btnRight.disabled = true;
+        }
+    }
+
+    btnLeft.onclick = function () {
+        if (curIndex < cardCount - 1) {
+            curIndex++; //1
+            let newPosition = curIndex * -320;
+            outer.style.transform = `translateX(${newPosition}px)`;
+            btnRight.disabled = false;
+        }
+
+        if (curIndex === 2) {
+            btnLeft.disabled = true;
+        }
+    }
+});
+
 
 
