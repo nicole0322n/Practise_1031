@@ -1,30 +1,4 @@
-// let sv = document.querySelector('#sv');
-// let sr = document.querySelector('#sr');
-// let tm = document.querySelector('#tm');
-// let ct = document.querySelector('#ct');
-// let service = document.querySelector('#service');
-// let showreel = document.querySelector('#showreel');
-// let team = document.querySelector('#team');
-// let contact = document.querySelector('#contact');
-
-// sv.addEventListener('click', function (event) {
-//     event.preventDefault();
-
-//     if (service) {
-//         service.scrollIntoView({ behavior: "smooth" });
-//     } else if (showreel) {
-//         showreel.scrollIntoView({ behavior: "smooth" });
-//     } else if (team) {
-//         team.scrollIntoView({ behavior: "smooth" });
-//     } else if (contact) {
-//         contact.scrollIntoView({ behavior: "smooth" });
-//     };
-//     // setTimeout(function () {
-//     //     scrollBy(0, -100);
-//     // }, 700);
-// })
-
-// 取得螢幕滾動高度
+// header滾動效果
 window.addEventListener('scroll', function () {
     let scrollHeight = window.scrollY || document.documentElement.scrollTop;
     // console.log("螢幕滾動高度：" + scrollHeight + "px");
@@ -81,4 +55,35 @@ window.addEventListener('scroll', function () {
         ct.classList.remove('show');
     }
 });
+
+// 手機版header
+$(document).ready(function () {
+    // 點擊 .hb 顯示 header
+    $('.hb').click(function () {
+        $('.header').toggleClass('open');
+        $('.hb>span').toggleClass('show');
+    });
+
+    $('#sv').click(function () {
+        $('.header').removeClass('open');
+        $('.hb>span').removeClass('show');
+    });
+
+    $('#sr').click(function () {
+        $('.header').removeClass('open');
+        $('.hb>span').removeClass('show');
+    });
+
+    $('#tm').click(function () {
+        $('.header').removeClass('open');
+        $('.hb>span').removeClass('show');
+    });
+
+    $('#ct').click(function () {
+        $('.header').removeClass('open');
+        $('.hb>span').removeClass('show');
+    });
+});
+
+
 
