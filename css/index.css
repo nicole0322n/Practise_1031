@@ -125,6 +125,12 @@ header a{
     margin: 0 10px;
     padding: 5px 10px;
     line-height: 50px;
+    transition: .3s;
+}
+
+header a:hover{
+    color: #666;
+    transition: .3s;
 }
 
 header a.show{
@@ -470,7 +476,6 @@ header a.show{
     border: 1px solid #eee;
     background-color: transparent;
     outline: none;
-    font-size: 16px;
 }
 
 .contact .information textarea:focus{
