@@ -130,11 +130,13 @@ inputs.forEach((input, index) => {
 
     input.addEventListener('focus', function () {
         labels[index].style.borderBottom = "1px solid #d95521";
+        labels[index].style.color = "#d95521";
         labels[index].style.transition = "all .2s";
     });
 
     input.addEventListener('blur', function () {
         labels[index].style.borderBottom = "1px solid #eee";
+        labels[index].style.color = "#eee";
         labels[index].style.transition = "all .2s";
     });
 });

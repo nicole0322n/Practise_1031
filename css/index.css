@@ -6,7 +6,7 @@ body{
    background-color: black;
 }
 
-h1,h2,h3,h4,h5,a,p,span,button,label{
+h1,h2,h3,h4,h5,a,p,span,button,label,input,textarea{
     color: #eee;
     line-height: 1.5;
 }
@@ -430,7 +430,7 @@ header a.show{
 
 
 .contact .information{
-   width: 60%;
+    width: 60%;
     margin: 5em auto 5em 5em ;
     display: flex;
     flex-wrap: wrap;
@@ -458,6 +458,7 @@ header a.show{
     background-color: #eee;
     border-radius: 50px;
     cursor: pointer;
+    color: #333;
 }
 
 .contact .information textarea{
@@ -469,11 +470,16 @@ header a.show{
     border: 1px solid #eee;
     background-color: transparent;
     outline: none;
+    font-size: 16px;
 }
 
 .contact .information textarea:focus{
     border: 1px solid #d95521;
 }
+
+/* .contact .information textarea:focus + label {
+   color: #d95521;
+} */
 /* ----------------------------------------- */
 
 /* footer */
