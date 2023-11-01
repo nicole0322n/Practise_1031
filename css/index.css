@@ -79,9 +79,6 @@ h1::before{
     animation: upDown 2s infinite ;
 }
 
-.banner .text p{
-}
-
 .banner .text::after{
     content: '';
     width: 5em;

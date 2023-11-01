@@ -91,9 +91,10 @@ window.addEventListener("load", function () {
     let btnLeft = document.querySelector("#btnLeft");
     let btnRight = document.querySelector("#btnRight");
     let curIndex = 0;
-    let cardCount = document.querySelectorAll(".card").length;
+    let cardCount = document.querySelectorAll(".outer>.card").length;
 
     btnRight.onclick = function () {
+        console.log(cardCount)
         if (curIndex > 0) {
             curIndex--;
             let newPosition = curIndex * -320;
@@ -114,7 +115,7 @@ window.addEventListener("load", function () {
             btnRight.disabled = false;
         }
 
-        if (curIndex === 2) {
+        if (curIndex === cardCount - 3) {
             btnLeft.disabled = true;
         }
     }
