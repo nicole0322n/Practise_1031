@@ -94,7 +94,6 @@ window.addEventListener("load", function () {
     let cardCount = document.querySelectorAll(".outer>.card").length;
 
     btnRight.onclick = function () {
-        console.log(cardCount)
         if (curIndex > 0) {
             curIndex--;
             let newPosition = curIndex * -320;
@@ -119,7 +118,25 @@ window.addEventListener("load", function () {
             btnLeft.disabled = true;
         }
     }
+
+
 });
 
+// 填寫資料 label 底線變色
+let labels = document.querySelectorAll('.information > label');
+let inputs = document.querySelectorAll('.information > label > input');
+
+inputs.forEach((input, index) => {
+
+    input.addEventListener('focus', function () {
+        labels[index].style.borderBottom = "1px solid #d95521";
+        labels[index].style.transition = "all .2s";
+    });
+
+    input.addEventListener('blur', function () {
+        labels[index].style.borderBottom = "1px solid #eee";
+        labels[index].style.transition = "all .2s";
+    });
+});
 
 
