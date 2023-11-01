@@ -76,6 +76,10 @@ h1::before{
 .banner .text{
     position: absolute;
     bottom: 7em;
+    animation: upDown 2s infinite ;
+}
+
+.banner .text p{
 }
 
 .banner .text::after{
@@ -87,6 +91,18 @@ h1::before{
     position: absolute;
     bottom: -3em;
     right: -15px;
+}
+
+@keyframes upDown {
+    0%{
+        bottom: 7em;
+    }
+    50%{
+        bottom: 5em;
+    }
+    100%{
+        bottom: 7em;
+    }
 }
 
 /* ----------------------------------------- */
