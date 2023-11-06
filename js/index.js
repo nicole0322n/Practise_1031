@@ -57,43 +57,28 @@ window.addEventListener('scroll', function () {
 });
 
 // 手機版header
-$(document).ready(function () {
-    // 點擊 .hb 顯示 header
-    $('.hb').click(function () {
-        $('.header').toggleClass('open');
-        $('.hb>span').toggleClass('show');
-    });
-
-    $('#sv').click(function () {
-        $('.header').removeClass('open');
-        $('.hb>span').removeClass('show');
-    });
-
-    $('#sr').click(function () {
-        $('.header').removeClass('open');
-        $('.hb>span').removeClass('show');
-    });
-
-    $('#tm').click(function () {
-        $('.header').removeClass('open');
-        $('.hb>span').removeClass('show');
-    });
-
-    $('#ct').click(function () {
-        $('.header').removeClass('open');
-        $('.hb>span').removeClass('show');
-    });
-});
+const headerList = ['.mobile__hb', '#sv', '#sr', '#tm', '#ct']
+const handleHeaderMobile = () => {
+    const header = document.querySelector('.header')
+    const spans = document.querySelectorAll(`.mobile__hb > span`)
+    headerList.forEach((v) => {
+        const el = document.querySelector(v);
+        el.addEventListener('click', () => {
+            header.classList.toggle('--open')
+            spans.forEach(span => span.classList.toggle('show'));
+        })
+    })
+}
 
 // 輪播圖
-window.addEventListener("load", function () {
-    let outer = document.querySelector(".outer");
+const handleSilder = () => {
+    let outer = document.querySelector(".showreel__outer");
     let btnLeft = document.querySelector("#btnLeft");
     let btnRight = document.querySelector("#btnRight");
     let curIndex = 0;
-    let cardCount = document.querySelectorAll(".outer>.card").length;
+    let cardCount = document.querySelectorAll(".showreel__outer > .showreel__card").length;
 
-    btnRight.onclick = function () {
+    btnRight.addEventListener("click", () => {
         if (curIndex > 0) {
             curIndex--;
             let newPosition = curIndex * -320;
@@ -104,9 +89,9 @@ window.addEventListener("load", function () {
         if (curIndex === 0) {
             btnRight.disabled = true;
         }
-    }
+    })
 
-    btnLeft.onclick = function () {
+    btnLeft.addEventListener("click", () => {
         if (curIndex < cardCount - 1) {
             curIndex++; //1
             let newPosition = curIndex * -320;
@@ -117,28 +102,32 @@ window.addEventListener("load", function () {
         if (curIndex === cardCount - 3) {
             btnLeft.disabled = true;
         }
-    }
-
-
-});
+    })
+}
 
 // 填寫資料 label 底線變色
-let labels = document.querySelectorAll('.information > label');
-let inputs = document.querySelectorAll('.information > label > input');
+const handleLabel = () => {
+    const labels = document.querySelectorAll('.information > label');
+    const inputs = document.querySelectorAll('.information > label > input');
 
-inputs.forEach((input, index) => {
+    inputs.forEach((input, index) => {
 
-    input.addEventListener('focus', function () {
-        labels[index].style.borderBottom = "1px solid #d95521";
-        labels[index].style.color = "#d95521";
-        labels[index].style.transition = "all .2s";
+        input.addEventListener('focus', () => {
+            labels[index].classList.add('--active');
+        });
+
+        input.addEventListener('blur', () => {
+            labels[index].classList.remove('--active');
+        });
     });
+}
 
-    input.addEventListener('blur', function () {
-        labels[index].style.borderBottom = "1px solid #eee";
-        labels[index].style.color = "#eee";
-        labels[index].style.transition = "all .2s";
-    });
-});
+
+window.addEventListener("load", function () {
+    handleSilder()
+    handleLabel()
+    handleHeaderMobile()
+})
+
 
 

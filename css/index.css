@@ -68,18 +68,18 @@ h1::before{
     position: relative;
 }
 
-.banner .logo{
+.banner__logo{
     width: 100%;
     text-align: center;
 }
 
-.banner .text{
+.banner__text{
     position: absolute;
     bottom: 7em;
     animation: upDown 2s infinite ;
 }
 
-.banner .text::after{
+.banner__text::after{
     content: '';
     width: 5em;
     border: 1px solid #eee;
@@ -154,7 +154,7 @@ header a.show{
     left: 190px;
 }
 
-.service .card{
+.service__card{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -162,29 +162,29 @@ header a.show{
     margin: 5em 0;
 }
 
-.service .card .text{
+.service__text{
     width: 50%;
 }
 
-.service .card .text p{
+.service__text p{
     border-left: 3px solid #eee;
     padding-left: 15px;
 }
 
-.service .card .text h2{
+.service__text h2{
     display: inline-block;
 }
 
-.service .card .text span img{
+.service__text span img{
     padding-bottom: 10px;
     padding-right: 5px;
 }
 
-.service .card img{
+.service__card img{
     vertical-align: middle;
 }
 
-.service .card:nth-child(2n){
+.service__card:nth-child(2n){
     flex-direction: row-reverse;
 }
 /* ----------------------------------------- */
@@ -200,53 +200,53 @@ header a.show{
     left: 560px;
 }
 
-.showreel .wrapper{
+.showreel__wrapper{
     margin: 3em 0;
     background-color: rgba(255, 255, 255, 0.2);
     position: relative;
     padding: 3em 0;
 }
 
-.showreel .cover{
+.showreel__cover{
     width: 960px;
     margin: auto;
     display: flex;
     overflow: hidden;
 }
-.showreel .outer{
+.showreel__outer{
     width: 960px;
     margin: auto;
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-.showreel .card{
+.showreel__card{
     padding: 0 10px;
 }
 
-.showreel .card .text{
+.showreel__text{
     display: flex;
     justify-content: space-between;
     margin: .5em 0;
 }
-.showreel .card .text span{
+.showreel__text span{
     border: 1px solid #eee;
     width: 2em;
     display: inline-block;
     margin-bottom: 4px;
     margin-right: 1em;
 }
-.showreel .card .text a:last-child{
+.showreel__text a:last-child{
     font-size: 10px;
     line-height: 2.5;
 }
 
-.showreel .card img{
+.showreel__card img{
     vertical-align: middle;
 }
 
-.showreel .wrapper #btnLeft,
-.showreel .wrapper #btnRight{
+.showreel__wrapper #btnLeft,
+.showreel__wrapper #btnRight{
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -256,19 +256,19 @@ header a.show{
     transform: translateY(-50%);
 }
 
-.showreel .wrapper #btnLeft{
+.showreel__wrapper #btnLeft{
     left: 10em;
     z-index: 3;
 }
 
-.showreel .wrapper #btnRight{
+.showreel__wrapper #btnRight{
     right: 10em;
 }
 
-.showreel .wrapper #btnLeft::before,
-.showreel .wrapper #btnLeft::after,
-.showreel .wrapper #btnRight::before,
-.showreel .wrapper #btnRight::after
+.showreel__wrapper #btnLeft::before,
+.showreel__wrapper #btnLeft::after,
+.showreel__wrapper #btnRight::before,
+.showreel__wrapper #btnRight::after
 {
     content: '';
     width: 3.5em;
@@ -278,23 +278,23 @@ header a.show{
     right: 0;
     left: 0;
 }
-.showreel .wrapper #btnLeft::before{
+.showreel__wrapper #btnLeft::before{
     transform: translateY(1.25em) rotate(45deg);
 }
 
-.showreel .wrapper #btnLeft::after{
+.showreel__wrapper #btnLeft::after{
     transform: translateY(-1.25em) rotate(-45deg);
 }
 
-.showreel .wrapper #btnRight::before{
+.showreel__wrapper #btnRight::before{
     transform: translateY(1.25em) rotate(-45deg);
 }
 
-.showreel .wrapper #btnRight::after{
+.showreel__wrapper #btnRight::after{
     transform: translateY(-1.25em) rotate(45deg);
 }
 
-.showreel>button{
+.showreel__pc{
     background-color: transparent;
     border: 1px solid #eee;
     border-radius: 20px;
@@ -305,14 +305,14 @@ header a.show{
     transition: .3s;
 }
 
-.showreel>button:hover{
+.showreel__pc:hover{
     border: 1px solid #d95521;
     background-color: #d95521;
     color: #eee;
     transition: .3s;
 }
 
-.showreel .mb{
+.showreel__mb{
     display: none;
 }
 /* ----------------------------------------- */
@@ -328,11 +328,11 @@ header a.show{
     left: 400px;
 }
 
-.team .wrapper{
+.team__wrapper{
     display: flex;
 }
 
-.team .card{
+.team__card{
     width: calc(100% / 3);
     background-color: #333;
     margin: 6em 2em;
@@ -340,15 +340,15 @@ header a.show{
     position: relative;
 }
 
-.team .card:first-child{
+.team__card:first-child{
     transform: translateY(2em);
 }
 
-.team .card:last-child{
+.team__card:last-child{
     transform: translateY(-2em);
 }
 
-.team .card h4::before{
+.team__card h4::before{
     content: '';
     width: 1.5em;
     border: 1px solid #eee;
@@ -358,7 +358,7 @@ header a.show{
     left: -1em;
 }
 
-.team .card i{
+.team__card i{
     width: 150px;
     height: 150px;
     background-color: #d95521;
@@ -370,7 +370,7 @@ header a.show{
     margin: 0.5em auto;
 }
 
-.team .card h4,p{
+.team__card h4,p{
     line-height: 2;
 }
 /* ----------------------------------------- */
@@ -387,79 +387,85 @@ header a.show{
     left: -20px;
 }
 
-.contact .left{
+.contact__left{
     width: 50%;
     background-color: #fff;
 }
 
-.contact .wrapper{
+.contact__wrapper{
     width: 55%;
     margin: 5em 5em 5em auto;
 }
 
-.contact .text>h1,
-.contact .text>p,
-.contact .add>p,
-.contact .add>h1{
+.contact__text>h1,
+.contact__text>p,
+.contact__add>p,
+.contact__add>h1{
     color: #333;
     text-align: left;
 }
 
-.contact .wrapper .text{
+.contact__text{
     margin-bottom: 5em;
 }
 
-.contact .wrapper .add{
+.contact__add{
     border-bottom: 1px solid #ccc;
     padding: 1em 0;
 }
-.contact .wrapper .add i{
+.contact__add i{
     font-size: 28px;
 }
 
-.contact .wrapper .add .tel{
+.contact__tel{
     font-size: 28px;
     color: #d95521;
 }
 
-.contact .wrapper .logo img{
+.contact__logo img{
     vertical-align: middle;
     width: 50px;
     margin: 2em 0;
 }
 
 
-.contact .right{
+.contact__right{
     width: 50%;
     background-color: #222;
 }
 
 
-.contact .information{
+.contact__information{
     width: 60%;
     margin: 5em auto 5em 5em ;
     display: flex;
     flex-wrap: wrap;
 }
 
-.contact .information label{
+.contact__information label{
     width: 100%;
     border-bottom: 1px solid #eee;
     padding: 1em 0;
     margin: 0.5em 0;
 }
 
-.contact .information label:nth-child(4n){
+.contact .information label.--active{
+    border-bottom: 1px solid #d95521;
+    color: #d95521;
+    transition: all .2s;
+}
+
+.contact__information label:nth-child(4n){
     border-bottom: none;
 }
 
-.contact .information input{
+.contact__information input{
     background-color: transparent;
     outline: none;
     border: none;  
 }
 
-.contact .information>input{
+.contact__information>input{
     padding: 10px 50px;
     background-color: #eee;
     border-radius: 50px;
@@ -467,7 +473,7 @@ header a.show{
     color: #333;
 }
 
-.contact .information textarea{
+.contact__information textarea{
     padding: 5px;
     box-sizing: border-box;
     margin: 1em 0;
@@ -478,7 +484,7 @@ header a.show{
     outline: none;
 }
 
-.contact .information textarea:focus{
+.contact__information textarea:focus{
     border: 1px solid #d95521;
 }
 
@@ -506,67 +512,74 @@ header a.show{
         display: none;
     }
 
-    .header.open{
+    .header.--open{
         display: flex;
+        flex-wrap: wrap;
     }
 
     .mobile{
         display: flex;
         position: fixed;
-        top: 5%;
-        right: 3%;
+        top: 2%;
+        right: 5%;
         z-index: 20;
+        /* border: 1px solid blue; */
     }
 
-    .hb{
+    .mobile__hb{
         display: flex;
         width:50px;
         height:50px;
         position: relative;
         margin-left: auto;
+        /* border: 1px solid red; */
     }
 
-    .hb span {
+    .mobile__hb span {
         width: 70%;
         height: 3px;
         background-color: #eee;
         position: absolute;
         margin: auto;
+        right: 0;
+        left: 0;
+        top: 50%;
     }
 
-    .hb span:nth-child(1) {
+    .mobile__hb span:nth-child(1) {
         translate: 0px -10px;
         rotate: 0deg;
         transition: translate 0.3s 0.3s,
             rotate 0.3s 0s;
     }
 
-    .hb span:nth-child(2) {
+    .mobile__hb span:nth-child(2) {
         opacity: 1;
         transition: opacity 0.3s 0.6s;
     }
 
-    .hb span:nth-child(3) {
+    .mobile__hb span:nth-child(3) {
         width: 30%;
+        margin-left: 15% ;
         translate: 0px 10px;
         rotate: 0deg;
         transition: translate 0.3s 0.3s,
             rotate 0.3s 0s;
     }
 
-    .hb span:nth-child(1).show {
+    .mobile__hb span:nth-child(1).show {
         translate: 0px 0px;
         rotate: 45deg;
         transition: translate 0.3s,
             rotate 0.6s 0.3s;
     }
 
-    .hb span:nth-child(2).show {
+    .mobile__hb span:nth-child(2).show {
         display: none;
         transition: opacity 0.3s;
     }
 
-    .hb span:nth-child(3).show {
+    .mobile__hb span:nth-child(3).show {
         width: 70%;
         translate: 0px 0px;
         rotate: -45deg;
@@ -585,10 +598,12 @@ header a.show{
         text-align: center;
     }
 
-    header .logo{
-        display: block;
+    .header__logo{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: center;
         width: 100%;
-        /* border: 1px solid red; */
     }
 
     header img{
@@ -596,7 +611,6 @@ header a.show{
     }
     
     header a{
-        /* border: 1px solid red; */
         display: block;
         margin: 3em auto;
         padding: 5px 0;
@@ -620,11 +634,11 @@ header a.show{
         left: 15px;
     }
 
-    .service .card{
+    .service__card{
         justify-content: center;
     }
 
-    .service .card .text{
+    .service__text{
         width: 100%;
         margin-bottom: 2em;
     } 
@@ -635,38 +649,45 @@ header a.show{
         left: 45px;
     }
 
-    .showreel .wrapper{
+    .showreel__wrapper{
         margin: 0;
         background-color: rgba(255, 255, 255, 0);
     }
 
-    .showreel .cover{
+    .showreel__cover{
         width: 90%;
         flex-wrap: wrap;
     }
 
-    .showreel .outer{
+    .showreel__outer{
         flex-wrap: wrap;
         width: 90%;
     }
-    .showreel .card{
+    .showreel__card{
         margin: 1em 0;
     }
 
-    .showreel .card:nth-of-type(3n+1){
+    .showreel__card:nth-of-type(3n+1){
         display: none;
     }
 
-    .showreel .wrapper #btnLeft,
-    .showreel .wrapper #btnRight{
+    .showreel__wrapper #btnLeft,
+    .showreel__wrapper #btnRight{
         display: none;
     }
 
-    .showreel .mb{
+    .showreel__mb{
+        background-color: transparent;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        padding: 10px 50px;
+        margin: auto;
         display: flex;
+        cursor:pointer;
+        transition: .3s;
     }
     
-    .showreel .pc{
+    .showreel__pc{
         display: none;
     }
 
@@ -686,11 +707,11 @@ header a.show{
         left: 80px;
     }
 
-    .team .wrapper{
+    .team__wrapper{
         flex-wrap: wrap;
     }
 
-    .team .card{
+    .team__card{
         width: calc(100% / 1);
         margin: 3em 2em;
     }
@@ -706,11 +727,11 @@ header a.show{
         padding: 5em 0 0;
     }
 
-    .contact .left{
+    .contact__left{
         width: 100%;
     }
 
-    .contact .wrapper{
+    .contact__wrapper{
         width: 80%;
         margin: 5em auto;
         display: flex;
@@ -718,33 +739,34 @@ header a.show{
         justify-content: center;
     }
 
-    .contact .text>h1,
-    .contact .text>p{
+    .contact__text>h1,
+    .contact__text>p{
         text-align: center;
     }
-    .contact .add>p,
-    .contact .add>h1{
+    .contact__add>p,
+    .contact__add>h1{
         text-align: left;
     }
 
-    .contact .wrapper .text{
+    .contact__text{
         margin-bottom: 5em;
     }
 
-    .contact .wrapper .tel{
+    .contact__tel{
         border-bottom: 1px solid #ccc;
         margin: 1em 0;
+        color: #d95521;
     }
 
-    .contact .wrapper .add{
+    .contact__add{
         border-bottom: none;
     }
 
-    .contact .right{
+    .contact__right{
         width: 100%;
     }
 
-    .contact .information{
+    .contact__information{
         justify-content: center;
     }
 /* ----------------------------------------- */
