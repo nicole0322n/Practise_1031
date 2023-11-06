@@ -65,6 +65,7 @@ const handleHeaderMobile = () => {
         const el = document.querySelector(v);
         el.addEventListener('click', () => {
             header.classList.toggle('--open')
+            // header.style.transition = all .5s;
             spans.forEach(span => span.classList.toggle('show'));
         })
     })
@@ -107,8 +108,8 @@ const handleSilder = () => {
 
 // 填寫資料 label 底線變色
 const handleLabel = () => {
-    const labels = document.querySelectorAll('.information > label');
-    const inputs = document.querySelectorAll('.information > label > input');
+    const labels = document.querySelectorAll('.contact__information > label');
+    const inputs = document.querySelectorAll('.contact__information > label > input');
 
     inputs.forEach((input, index) => {
 

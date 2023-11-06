@@ -141,6 +141,7 @@ header a.show{
 .mobile{
     display: none;
 }
+
 /* ----------------------------------------- */
 
 /* service */
@@ -449,7 +450,7 @@ header a.show{
     margin: 0.5em 0;
 }
 
-.contact .information label.--active{
+.contact__information label.--active{
     border-bottom: 1px solid #d95521;
     color: #d95521;
     transition: all .2s;
@@ -488,9 +489,6 @@ header a.show{
     border: 1px solid #d95521;
 }
 
-/* .contact .information textarea:focus + label {
-   color: #d95521;
-} */
 /* ----------------------------------------- */
 
 /* footer */
@@ -508,20 +506,27 @@ header a.show{
 /* RWD */
 @media screen and (max-width:414px) {
 
-    .header{
-        display: none;
+    header{
+        /* display: none; */
+        opacity: 0;
+        transition: opacity .7s;
+        /* visibility: hidden; */
+        pointer-events: none;
     }
 
     .header.--open{
         display: flex;
-        flex-wrap: wrap;
+        opacity: 1;
+        /* visibility: visible; */
+        pointer-events: auto;
+        transition: opacity .7s ;
     }
 
     .mobile{
         display: flex;
         position: fixed;
-        top: 2%;
-        right: 5%;
+        top: 5%;
+        right: 7%;
         z-index: 20;
         /* border: 1px solid blue; */
     }
