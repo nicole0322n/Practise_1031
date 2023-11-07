@@ -142,6 +142,8 @@ header a.show{
     display: none;
 }
 
+
+
 /* ----------------------------------------- */
 
 /* service */
@@ -507,17 +509,13 @@ header a.show{
 @media screen and (max-width:414px) {
 
     header{
-        /* display: none; */
         opacity: 0;
-        transition: opacity .7s;
-        /* visibility: hidden; */
         pointer-events: none;
+        transition: opacity .7s;
     }
 
     .header.--open{
-        display: flex;
         opacity: 1;
-        /* visibility: visible; */
         pointer-events: auto;
         transition: opacity .7s ;
     }
@@ -572,19 +570,19 @@ header a.show{
             rotate 0.3s 0s;
     }
 
-    .mobile__hb span:nth-child(1).show {
+    .mobile__hb span:nth-child(1).--show {
         translate: 0px 0px;
         rotate: 45deg;
         transition: translate 0.3s,
             rotate 0.6s 0.3s;
     }
 
-    .mobile__hb span:nth-child(2).show {
+    .mobile__hb span:nth-child(2).--show {
         display: none;
         transition: opacity 0.3s;
     }
 
-    .mobile__hb span:nth-child(3).show {
+    .mobile__hb span:nth-child(3).--show {
         width: 70%;
         translate: 0px 0px;
         rotate: -45deg;
@@ -599,8 +597,8 @@ header a.show{
         justify-content: center;
         position: fixed;
         top: 0;
-        background-color: black;
         text-align: center;
+        background-color: black;
     }
 
     .header__logo{
@@ -629,7 +627,7 @@ header a.show{
         display: flex;
         justify-content: center;
     }
-    
+
 /* service */
     .service{
         width: 70%;   

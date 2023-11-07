@@ -64,12 +64,16 @@ const handleHeaderMobile = () => {
     headerList.forEach((v) => {
         const el = document.querySelector(v);
         el.addEventListener('click', () => {
-            header.classList.toggle('--open')
-            // header.style.transition = all .5s;
-            spans.forEach(span => span.classList.toggle('show'));
+            header.classList.toggle('--open');
+            spans.forEach(span => span.classList.toggle('--show'));
         })
-    })
-}
+    });
+    header.addEventListener('click', () => {
+        header.classList.remove('--open');
+        spans.forEach(span => span.classList.remove('--show'));
+    });
+};
+
 
 // 輪播圖
 const handleSilder = () => {
@@ -121,14 +125,14 @@ const handleLabel = () => {
             labels[index].classList.remove('--active');
         });
     });
-}
+};
 
 
 window.addEventListener("load", function () {
     handleSilder()
     handleLabel()
     handleHeaderMobile()
-})
+});
 
 
 
